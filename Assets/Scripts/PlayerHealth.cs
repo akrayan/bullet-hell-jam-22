@@ -1,29 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour, IDameagble
 {
-    [SerializeField] private uint maxLife = 100;
+    [SerializeField][Min(0)] private int maxLife = 100;
 
-    public int currentLife { get; private set;}
+    public int currentLife;
 
-    // Start is called before the first frame update
+    public UnityAction<int, int> onLifeChange;
+
     void Start()
     {
-        currentLife = (int)maxLife;
-
-        Debug.Log("Start Life at " + currentLife);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentLife = maxLife;
+        onLifeChange.Invoke(currentLife, maxLife);
     }
 
     public void TakeDamages(int damages) {
         currentLife -= damages;
-        Debug.Log("Ouille ! Sapristi jai pris " + damages + " ! i have now " + currentLife + " pdv");
+        onLifeChange.Invoke(currentLife, maxLife);
     }
 }
