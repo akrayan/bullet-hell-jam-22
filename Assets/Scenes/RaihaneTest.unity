@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterDamages: 20
   durationDamages: 1
-  durationDamagesTime: 10
+  durationDamagesTime: 0.5
 --- !u!61 &204370818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterDamages: 20
   durationDamages: 1
-  durationDamagesTime: 10
+  durationDamagesTime: 0.5
 --- !u!61 &460231228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterDamages: 20
   durationDamages: 1
-  durationDamagesTime: 10
+  durationDamagesTime: 0.5
 --- !u!61 &1140196373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterDamages: 20
   durationDamages: 1
-  durationDamagesTime: 10
+  durationDamagesTime: 0.5
 --- !u!61 &1669545992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1950,10 +1950,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2145686543}
   - component: {fileID: 2145686542}
-  - component: {fileID: 2145686541}
   - component: {fileID: 2145686544}
   - component: {fileID: 2145686545}
   - component: {fileID: 2145686546}
+  - component: {fileID: 2145686541}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2014,7 +2014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8cb2decef279cda47a8486f4deec046d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2101,3 +2101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLife: 100
+  currentLife: 0
