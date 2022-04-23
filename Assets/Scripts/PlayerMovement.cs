@@ -8,20 +8,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float Speed = 1;
 
     private Rigidbody2D rb;
-    private float horizontal = 0;
-    private float vertical = 0;
+    private PlayerInput pi;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pi = GetComponent<PlayerInput>();
     }
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        Vector3 direction = new Vector3(horizontal, vertical, 0);
+        Vector3 direction = new Vector3(pi.horizontal, pi.vertical, 0);
         rb.MovePosition(transform.position + direction * Speed * Time.fixedDeltaTime);
     }
 }
